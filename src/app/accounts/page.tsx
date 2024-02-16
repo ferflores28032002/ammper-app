@@ -1,45 +1,22 @@
 "use client";
+import { Button, MaxWidthWrapper } from "@/components";
 import { DataTable } from "@/components/DataTable";
-import { ColumnDef } from "@tanstack/react-table";
-import { Checkbox } from "@radix-ui/react-checkbox";
-import { CaretSortIcon, DotsHorizontalIcon } from "@radix-ui/react-icons";
+import Loading from "@/components/Loading";
 import {
   DropdownMenu,
-  DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button, MaxWidthWrapper } from "@/components";
-import { Account } from "@/store/interfaces/Account.interface";
 import { useAccounts } from "@/services/belvo/account.services";
-import Loading from "@/components/Loading";
+import { Account } from "@/store/interfaces/Account.interface";
+import { Checkbox } from "@radix-ui/react-checkbox";
+import { DotsHorizontalIcon } from "@radix-ui/react-icons";
+import { ColumnDef } from "@tanstack/react-table";
 
-export const columns: ColumnDef<Account>[] = [
-  {
-    id: "id",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
+const columns: ColumnDef<Account>[] = [
   {
     accessorKey: "name",
     header: "name",
