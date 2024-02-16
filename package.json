@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
@@ -17,6 +19,7 @@
     "@tanstack/react-table": "^8.12.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cypress": "^13.6.4",
     "highcharts": "^11.3.0",
     "highcharts-react-official": "^3.2.1",
     "i18next": "^23.8.2",

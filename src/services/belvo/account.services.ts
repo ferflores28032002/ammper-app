@@ -22,7 +22,7 @@ const fetcher = async (url: string) => {
 
 export function useAccounts() {
   const { data, error, isLoading, ...rest } = useSWR(
-    `${process.env.BASE_URL}/accounts?page=1`,
+    `${process.env.BASE_URL}/accounts`,
     fetcher
   );
 

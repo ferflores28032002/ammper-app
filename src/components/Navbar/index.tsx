@@ -12,7 +12,7 @@ const Navbar = () => {
         <MaxWidthWrapper className="border-b border-y-gray-200 dark:border-y-gray-700">
           <div className="flex h-16 justify-between items-center">
             <div className="ml-4 flex  lg:ml-0">
-              <Link href="/">
+              <Link href="/" id="cypress-btn-home-redirect">
                 <Icons.logo className="h-10 w-10" />
               </Link>
             </div>

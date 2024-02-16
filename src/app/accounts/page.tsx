@@ -1,11 +1,10 @@
 "use client";
-import { MaxWidthWrapper } from "@/components";
-import { DataTable } from "@/components/DataTable";
+
+import { DataTable, FeatureMessage, MaxWidthWrapper } from "@/components/";
 import Loading from "@/components/Loading";
 
 import { useAccounts } from "@/services/belvo/account.services";
 import { columns } from "./shared/columns.accounts";
-import FeatureMessage from "@/components/FeatureMessage";
 
 const AccountsPage = () => {
   const { accounts, isLoading, error } = useAccounts();

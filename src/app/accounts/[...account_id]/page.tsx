@@ -26,10 +26,10 @@ const TransactionsPage = () => {
   const params = useParams();
 
   const { transactions, error, isLoading } = useTransactions({
-    link: "c51e0460-b917-43db-aeed-ef2f7afb05a3",
-    date_from: "2023-05-12",
+    link: `${params.account_id[1]}`,
+    date_from: "2022-01-01",
     date_to: "2024-02-12",
-    account: `${params.account_id}`,
+    account: `${params.account_id[0]}`,
   });
 
   if (isLoading) return <Loading />;

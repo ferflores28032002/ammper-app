@@ -100,7 +100,9 @@ export const columns: ColumnDef<Account>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => (window.location.href = `/accounts/${payment.id}`)}
+              onClick={() =>
+                (window.location.href = `/accounts/${payment.id}/${payment.link}`)
+              }
             >
               Transactions
             </DropdownMenuItem>
