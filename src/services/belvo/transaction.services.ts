@@ -35,7 +35,7 @@ export function useTransactions(payload: TransactionRequestData) {
   if (data) setTransaction(data);
 
   return {
-    transactions: data,
+    transactions: data!,
     error,
     isLoading,
     ...rest,
