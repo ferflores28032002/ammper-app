@@ -27,7 +27,6 @@ const perks = [
 ];
 
 export default function Home() {
-  const { accounts } = useAccounts();
   const { transactions, error, isLoading } = useTransactions({
     link: "c51e0460-b917-43db-aeed-ef2f7afb05a3",
     date_from: "2023-05-12",
@@ -48,7 +47,7 @@ export default function Home() {
             our team to ensure our highest quality starndars
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Link href="/products" className={buttonVariants()}>
+            <Link href="/accounts" className={buttonVariants()}>
               Browse Trending
             </Link>
             <Button>Our quality promise &rarr;</Button>
