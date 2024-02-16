@@ -1,13 +1,24 @@
 "use client";
 
+export * from "./CustomAlert";
 export * from "./DataTable";
 export { default as FeatureMessage } from "./FeatureMessage";
+export { default as Footer } from "./Footer";
+export { default as AreaChart } from "./Highcharts/AreaChart";
+export { default as ComparativeHistograms } from "./Highcharts/ComparativeHistograms";
+export { default as MultiLineChart } from "./Highcharts/MultiLineChart";
+export { default as PieChart } from "./Highcharts/PieChart";
+export { default as ScatterPlot } from "./Highcharts/ScatterPlot";
+export { default as StackedBarChart } from "./Highcharts/StackedBarChart";
+export { default as TransactionTypePieChart } from "./Highcharts/TransactionTypePieChart";
 export { default as Loading } from "./Loading";
 export { default as MaxWidthWrapper } from "./MaxWidthWrapper";
 export * from "./ModeToggle";
 export { default as Navbar } from "./Navbar";
+export * from "./ui/alert";
 export * from "./ui/button";
 export * from "./ui/checkbox";
 export * from "./ui/dropdown-menu";
 export * from "./ui/input";
 export * from "./ui/table";
+export * from "./ui/tabs";

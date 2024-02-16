@@ -8,9 +8,10 @@ import { columns } from "./shared/columns.accounts";
 import FeatureMessage from "@/components/FeatureMessage";
 
 const AccountsPage = () => {
-  const { accounts, isLoading } = useAccounts();
+  const { accounts, isLoading, error } = useAccounts();
 
   if (isLoading) return <Loading />;
+  if (error) return <div>An error has occurred...</div>;
 
   return (
     <div>
