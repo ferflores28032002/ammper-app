@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ammper-app (belvo)
 
-## Getting Started
+**Demo:** [https://ammper-app.netlify.app/](https://ammper-app.netlify.app/)
 
-First, run the development server:
+## Resumen
 
-```bash
-npm run dev
-# or
+Este repositorio contiene el código para el proyecto ammper-app, desarrollado para la evaluación técnica de Belvo. El proyecto utiliza Next.js, SWR para la obtención de datos, TypeScript para tipado estático y Tailwind CSS para estilización junto con ui.shadcn. Cypress se utiliza para pruebas de extremo a extremo.
+
+La aplicación está desplegada en Netlify y se puede acceder [aquí](https://ammper-app.netlify.app/).
+
+## Empezando
+
+Para ejecutar el servidor de desarrollo, utiliza el siguiente comando:
+```
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Luego, abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pruebas de Extremo a Extremo con Cypress
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Cypress se utiliza para pruebas de extremo a extremo. Para ejecutar las pruebas de Cypress, utiliza el siguiente comando:
 
-## Learn More
+```
+cypress:open
+```
 
-To learn more about Next.js, take a look at the following resources:
+Esto abrirá el Cypress Test Runner, permitiéndote seleccionar y ejecutar pruebas de forma interactiva.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ¿Por qué Next.js?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Next.js fue elegido para este proyecto debido a su soporte integrado para renderizado del lado del servidor, generación de sitios estáticos y rutas de API. Ofrece un excelente rendimiento desde el principio y simplifica el proceso de desarrollo con características como la división automática de código y la sustitución de módulos en caliente.
 
-## Deploy on Vercel
+## ¿Por qué SWR?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+SWR (Stale-While-Revalidate) se utiliza para la obtención de datos en este proyecto debido a su simplicidad y eficiencia. SWR maneja automáticamente el almacenamiento en caché, la revalidación y el manejo de errores, proporcionando una experiencia de obtención de datos suave y optimizada para los usuarios.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## ¿Por qué Tailwind CSS y UI.SHADCN?
+
+Tailwind CSS es un framework de CSS de utilidades que simplifica el proceso de estilización al proporcionar un conjunto de clases de utilidades predefinidas. Promueve la consistencia y el desarrollo rápido al tiempo que permite una personalización fácil. Además, su función de purga garantiza que solo se incluya el CSS necesario en la compilación final, optimizando el rendimiento.
+
+## Conclusión
+
+El proyecto ammper-app aprovecha tecnologías modernas y mejores prácticas para ofrecer una aplicación web robusta y de alto rendimiento. Al utilizar Next.js, SWR, Cypress, Tailwind CSS y TypeScript, el proyecto logra un equilibrio entre la productividad del desarrollador y la experiencia del usuario.
